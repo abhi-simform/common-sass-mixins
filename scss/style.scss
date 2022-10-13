@@ -1,0 +1,58 @@
+@use 'functions' as fucntions;
+@use 'breakpoints' as breakpoints;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 fucntions.rem(20);
+  margin: 0 auto;
+  @each $breakpoint-name, $breakpoint-size in breakpoints.$breakpoints-up {
+    @include breakpoints.breakpoint-up($breakpoint-name) {
+      max-width: #{$breakpoint-size};
+    }
+  }
+}
