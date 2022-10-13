@@ -1,0 +1,45 @@
+$breakpoints-up: (
+  'sm': '36rem',
+  'md': '48rem',
+  'lg': '64rem',
+  'xl': '80rem',
+  'xxl': '90rem',
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+$breakpoints-down: (
+  'sm': '35.99rem',
+  'md': '47.99rem',
+  'lg': '63.99rem',
+  'xl': '79.99rem',
+  'xxl': '89.99rem',
+);
+
+@mixin breakpoint-down($size) {
+  @media (min-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+@mixin custom-breakpoint-up($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin custom-breakpoint-down($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin custom-breakpoint-range($min-size, $max-size) {
+  @media (min-width: $min-size) and (max-width: $max-size) {
+    @content;
+  }
+}
