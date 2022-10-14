@@ -3,7 +3,7 @@
 @use 'positions' as positions;
 @use 'flexbox' as flexbox;
 @use 'prefix' as prefix;
-
+@use 'pseudo' as pseudo;
 *,
 *::before,
 *::after {
@@ -134,5 +134,18 @@ h3 {
   );
   .child {
     margin: 0;
+  }
+}
+
+.pseudo {
+  .before {
+    @include pseudo.pseudo($type: before) {
+      background-color: rgba(red, 0.3);
+    }
+  }
+  .after {
+    @include pseudo.pseudo($type: after) {
+      background-color: rgba(green, 0.3);
+    }
   }
 }
