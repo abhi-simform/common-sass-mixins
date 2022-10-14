@@ -74,6 +74,15 @@ h6 {
   }
 }
 
+h2 {
+  margin: 1rem auto 0.5rem auto;
+}
+
+h3 {
+  margin: 1rem auto 0.5rem auto;
+  text-align: center;
+}
+
 .positioning {
   position: relative;
   overflow: hidden;
@@ -86,13 +95,81 @@ h6 {
 }
 .positioning .absolute {
   position: absolute;
-  top: 60px;
+  top: 80px;
   right: 0;
 }
 .positioning .fixed {
   position: fixed;
   top: 10px;
   right: 10px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0 -1rem;
+}
+.flex .child {
+  background-color: lightsteelblue;
+  color: midnightblue;
+  min-width: min-content;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  max-width: 100%;
+  border-radius: 4px;
+}
+.flex--wrap {
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.flex--wrap .child {
+  -webkit-flex: 1 1 calc(33.33% - 2rem);
+  -moz-flex: 1 1 calc(33.33% - 2rem);
+  -ms-flex: 1 1 calc(33.33% - 2rem);
+  flex: 1 1 calc(33.33% - 2rem);
+  width: calc(33.33% - 2rem);
+}
+.flex--reverse {
+  -webkit-flex-direction: column-reverse;
+  -moz-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  -o-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+.flex--reverse .child {
+  -webkit-flex: 1 1 calc(100% - 2rem);
+  -moz-flex: 1 1 calc(100% - 2rem);
+  -ms-flex: 1 1 calc(100% - 2rem);
+  flex: 1 1 calc(100% - 2rem);
+  width: calc(100% - 2rem);
+  margin: 0.5rem 1rem;
+}
+.flex--space {
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: flex-start;
+  -moz-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.flex--space .child {
+  -webkit-flex: 1 1 calc(33.33% - 2rem);
+  -moz-flex: 1 1 calc(33.33% - 2rem);
+  -ms-flex: 1 1 calc(33.33% - 2rem);
+  flex: 1 1 calc(33.33% - 2rem);
+  width: calc(33.33% - 2rem);
+  max-width: calc(33.33% - 2rem);
 }
 
 /*# sourceMappingURL=style.css.map */
