@@ -1,5 +1,6 @@
-@use 'functions' as fucntions;
+@use 'functions' as functions;
 @use 'breakpoints' as breakpoints;
+@use 'positions' as positions;
 
 *,
 *::before,
@@ -48,11 +49,26 @@ h6 {
 .container {
   width: 100%;
   max-width: 100%;
-  padding: 0 fucntions.rem(20);
-  margin: 0 auto;
+  padding: 0 functions.rem(20);
+  margin: functions.rem(20) auto;
   @each $breakpoint-name, $breakpoint-size in breakpoints.$breakpoints-up {
     @include breakpoints.breakpoint-up($breakpoint-name) {
       max-width: #{$breakpoint-size};
     }
+  }
+}
+
+.positioning {
+  @include positions.relative();
+  overflow: hidden;
+  padding-bottom: 30px;
+  .relative {
+    @include positions.relative($top: 0px, $right: -200px);
+  }
+  .absolute {
+    @include positions.absolute($top: 60px, $right: 0);
+  }
+  .fixed {
+    @include positions.fixed($top: 10px, $right: 10px);
   }
 }
