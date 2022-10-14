@@ -8,21 +8,39 @@
     <title>Common SASS Mixins</title>
   </head>
   <body>
-    <section>
-      <div class="container">
-        <h1>Common SASS Mixins</h1>
-        <p>A set of useful mixins ready to be used in your project.</p>
+    <div class="container">
+      <h1>Common SASS Mixins</h1>
+      <p>A set of useful mixins ready to be used in your project.</p>
+    </div>
+    <hr />
+    <div class="container positioning">
+      <h2>Positioning Mixins</h2>
+      <div class="relative"><strong>Relative Position</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, voluptates?</div>
+      <div class="absolute"><strong>Absolute Position</strong> - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, voluptate!</div>
+      <div class="fixed"><strong>Fixed Position</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, numquam.</div>
+    </div>
+    <hr />
+    <div class="container">
+      <h2>Flexbox Mixins</h2>
+      <h3>Flexbox with Wrapping and Center Justification</h3>
+      <div class="flex flex--wrap">
+        <div class="child">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, at?</div>
+        <div class="child">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, at?</div>
+        <div class="child">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, at?</div>
       </div>
-      <hr />
-      <div class="container positioning">
-        <h2>Positioning Mixins</h2>
-        <div class="relative">
-          <strong>Relative Position</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, voluptates?
+      <h3>Flexbox with Reverse Column Direction</h3>
+      <div class="flex flex--reverse">
+        <div class="child">This is <strong>1st</strong> in structure Lorem ipsum dolor sit amet.</div>
+        <div class="child">This is <strong>2nd</strong> in structure Lorem ipsum dolor sit amet.</div>
+        <div class="child">This is <strong>3rd</strong> in structure Lorem ipsum dolor sit amet.</div>
+      </div>
+      <h3>Flexbox with Align Items Start and Justify Content Space-between</h3>
+      <div class="flex flex--space">
+        <div class="child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis.</div>
+        <div class="child">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempore quam culpa sequi fuga ducimus qui est mollitia incidunt perferendis?
         </div>
-        <div class="absolute"><strong>Absolute Position</strong> - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, voluptate!</div>
-        <div class="fixed"><strong>Fixed Position</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, numquam.</div>
       </div>
-      <hr />
-    </section>
+    </div>
   </body>
 </html>

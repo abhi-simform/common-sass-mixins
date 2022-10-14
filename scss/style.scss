@@ -1,6 +1,7 @@
 @use 'functions' as functions;
 @use 'breakpoints' as breakpoints;
 @use 'positions' as positions;
+@use 'flexbox' as flexbox;
 
 *,
 *::before,
@@ -58,6 +59,15 @@ h6 {
   }
 }
 
+h2 {
+  margin: 1rem auto 0.5rem auto;
+}
+
+h3 {
+  margin: 1rem auto 0.5rem auto;
+  text-align: center;
+}
+
 .positioning {
   @include positions.relative();
   overflow: hidden;
@@ -66,9 +76,48 @@ h6 {
     @include positions.relative($top: 0px, $right: -200px);
   }
   .absolute {
-    @include positions.absolute($top: 60px, $right: 0);
+    @include positions.absolute($top: 80px, $right: 0);
   }
   .fixed {
     @include positions.fixed($top: 10px, $right: 10px);
+  }
+}
+
+.flex {
+  @include flexbox.displayflex;
+  margin: 0 -1rem;
+  .child {
+    background-color: lightsteelblue;
+    color: midnightblue;
+    min-width: min-content;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    max-width: 100%;
+    border-radius: 4px;
+  }
+  &--wrap {
+    @include flexbox.flexwrap;
+    @include flexbox.justifycenter;
+    .child {
+      @include flexbox.setflex($basis: calc(33.33% - 2rem));
+      width: calc(33.33% - 2rem);
+    }
+  }
+  &--reverse {
+    @include flexbox.directioncolumnreverse;
+    .child {
+      @include flexbox.setflex($basis: calc(100% - 2rem));
+      width: calc(100% - 2rem);
+      margin: 0.5rem 1rem;
+    }
+  }
+  &--space {
+    @include flexbox.justifyspacebetween;
+    @include flexbox.alignstart;
+    .child {
+      @include flexbox.setflex($basis: calc(33.33% - 2rem));
+      width: calc(33.33% - 2rem);
+      max-width: calc(33.33% - 2rem);
+    }
   }
 }
