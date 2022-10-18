@@ -4,6 +4,27 @@
 @use 'flexbox' as flexbox;
 @use 'prefix' as prefix;
 @use 'pseudo' as pseudo;
+@use 'colors' as colors;
+
+:root {
+  @each $color, $shades in colors.$colors {
+    @each $shade, $value in $shades {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+}
+
+@each $color, $shades in colors.$colors {
+  @each $shade, $value in $shades {
+    .text-#{$color}-#{$shade} {
+      color: $value;
+    }
+    .bg-#{$color}-#{$shade} {
+      color: $value;
+    }
+  }
+}
+
 *,
 *::before,
 *::after {
