@@ -20,7 +20,7 @@
       color: $value;
     }
     .bg-#{$color}-#{$shade} {
-      color: $value;
+      background-color: $value;
     }
   }
 }
