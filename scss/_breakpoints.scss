@@ -1,9 +1,10 @@
 $breakpoints-up: (
-  'sm': '36rem',
-  'md': '48rem',
-  'lg': '64rem',
-  'xl': '80rem',
-  'xxl': '90rem',
+  'xs': '400px',
+  'sm': '640px',
+  'md': '768px',
+  'lg': '1024px',
+  'xl': '1280px',
+  'xxl': '1536px',
 );
 
 @mixin breakpoint-up($size) {
@@ -13,11 +14,12 @@ $breakpoints-up: (
 }
 
 $breakpoints-down: (
-  'sm': '35.99rem',
-  'md': '47.99rem',
-  'lg': '63.99rem',
-  'xl': '79.99rem',
-  'xxl': '89.99rem',
+  'xs': '299px',
+  'sm': '639px',
+  'md': '767px',
+  'lg': '1023px',
+  'xl': '1279px',
+  'xxl': '1535px',
 );
 
 @mixin breakpoint-down($size) {
